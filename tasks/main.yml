@@ -44,12 +44,12 @@
   tags:
     - cinder-config
 
-- include: cinder_service_setup.yml
-  when:
-    - groups['cinder_all'] | length > 0
-    - inventory_hostname == groups['cinder_all'][0]
-  tags:
-    - cinder-config
+# - include: cinder_service_setup.yml
+#   when:
+#     - groups['cinder_all'] | length > 0
+#     - inventory_hostname == groups['cinder_all'][0]
+#   tags:
+#     - cinder-config
 
 - include: cinder_init_common.yml
   tags:
